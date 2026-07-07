@@ -1,157 +1,233 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* ==========================================================================
+   ESTILOS GENERALES: INSPIRACIÓN PERGAMINO Y DISEÑO EDITORIAL
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background:#f4f4f4;
+body {
+    background-color: #f6ebd4; /* Tono cálido de pergamino base */
     font-family: Georgia, "Times New Roman", serif;
-    color:#333;
-    line-height:1.8;
+    color: #2b1f1d;
+    line-height: 1.8;
+    padding: 20px 0;
 }
 
-header,
-section,
-footer{
-    width:80%;
-    margin:25px auto;
+/* ==========================================================================
+   ESTRUCTURA Y CONTENEDORES (SECCIONES ESTILO HOJA DE LIBRO)
+   ========================================================================== */
+header, 
+section, 
+footer {
+    width: 85%;
+    max-width: 1000px;
+    margin: 0 auto 25px auto;
 }
 
-header{
-    text-align:center;
-    background:white;
-    padding:40px;
-    border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,.1);
-    margin-bottom:30px;
+header {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+    background: #fdf5e6;
+    padding: 35px;
+    border-radius: 8px;
+    border: 2px solid #b89775;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
 }
 
-header h1{
-    font-size:40px;
-    color:#1d3557;
+header h1 {
+    font-size: 36px;
+    color: #861708; /* Elegante tono vino / granate antiguo */
+    letter-spacing: 1px;
 }
 
-header p{
-    font-size:22px;
-    color:#666;
-    margin-top:10px;
+section {
+    background: #fffdf9; /* Fondo imitación hoja de papel antiguo */
+    padding: 35px;
+    border-radius: 8px;
+    border: 1px solid #e3d3bd;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
-section{
-    background:white;
-    margin-bottom:25px;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 3px 10px rgba(0,0,0,.08);
-    width:95%;
+h2 {
+    color: #861708;
+    font-size: 22px;
+    border-bottom: 2px solid #b89775;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
 }
 
-h2{
-    color:#1d3557;
-    border-bottom:3px solid #1d3557;
-    padding-bottom:8px;
-    margin-bottom:20px;
+p {
+    margin-bottom: 15px;
+    text-align: justify;
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:20px;
+/* ==========================================================================
+   PERFIL EN PARALELO (FOTO A UN LADO, TABLA AL OTRO)
+   ========================================================================== */
+.perfil-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+    margin-top: 15px;
 }
 
-table td{
-    border:1px solid #ddd;
-    padding:12px;
-    vertical-align:top;
+.perfil-foto-bloque {
+    flex: 1;
+    max-width: 250px;
+    text-align: center;
 }
 
-table tr:first-child{
-    background:#f8f8f8;
+.perfil-foto-bloque img {
+    width: 100%;
+    height: auto;
+    border: 5px double #b89775; /* Marco clásico literario */
+    padding: 5px;
+    background: #ffffff;
+    border-radius: 4px;
 }
 
-img{
-    max-width:100%;
-    height:auto;
-    border-radius:8px;
+.perfil-foto-bloque strong {
+    display: block;
+    margin-top: 10px;
+    color: #861708;
+    font-size: 18px;
 }
 
-ul{
-    padding-left:25px;
+.perfil-datos-bloque {
+    flex: 2;
 }
 
-li{
-    margin-bottom:20px;
+/* ==========================================================================
+   TABLA DE DATOS BIOGRÁFICOS
+   ========================================================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-blockquote{
-    background:#f9f9f9;
-    border-left:5px solid #1d3557;
-    padding:20px;
-    font-style:italic;
-    margin-top:20px;
+table td {
+    border: none;
+    border-bottom: 1px solid #e3d3bd;
+    padding: 10px 12px;
+    vertical-align: top;
 }
 
-
-
-footer{
-    background:#1d3557;
-    color:#ddd;
-    text-align:center;
-    padding:15px;
-    border-radius:12px;
+table tr:last-child td {
+    border-bottom: none;
 }
 
-footer h3{
-    margin:0 0 10px;
-    font-size:18px;
+table td strong {
+    color: #861708;
 }
 
-.footer-links,
-.social{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    flex-wrap:wrap;
-    margin:8px 0;
+/* ==========================================================================
+   ELEMENTOS LITERARIOS (CITAS Y LISTAS)
+   ========================================================================== */
+ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
 }
 
-.footer-links a,
-.social a{
-    color:white;
-    text-decoration:none;
-    font-size:15px;
+li {
+    margin-bottom: 12px;
 }
 
-.compartir{
-    margin:8px 0;
-    font-size:14px;
+blockquote {
+    background: #fdfaf2;
+    border-left: 5px solid #b89775;
+    padding: 20px;
+    font-style: italic;
+    margin: 25px 0;
+    color: #4a3b32;
 }
 
-.licencia{
-    margin-top:8px;
-    padding-top:8px;
-    border-top:1px solid rgba(255,255,255,.2);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:8px;
-    flex-wrap:wrap;
-    font-size:13px;
+/* ==========================================================================
+   PIE DE PÁGINA
+   ========================================================================== */
+footer {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    background: #861708; 
+    color: #f6ebd4;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 8px;
 }
 
-.licencia img{
-    width:55px;
-    height:auto;
+footer h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
-@media(max-width:768px){
+.footer-links, 
+.social, 
+.licencia {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
 
-    .footer-links,
-    .social,
-    .licencia{
-        flex-direction:column;
-        gap:15px;
+.footer-links a, 
+.social a {
+    color: #f6ebd4;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.footer-links a:hover, 
+.social a:hover {
+    text-decoration: underline;
+}
+
+.compartir {
+    margin: 12px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.licencia {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(246, 235, 212, 0.2);
+    align-items: center;
+    font-size: 13px;
+}
+
+.licencia img {
+    width: 55px;
+    height: auto;
+}
+
+@media(max-width: 768px) {
+    header, 
+    section, 
+    footer {
+        width: 95%;
+        padding: 20px;
     }
 
+    .perfil-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .perfil-foto-bloque {
+        max-width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .footer-links, 
+    .social, 
+    .licencia {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    
 }
